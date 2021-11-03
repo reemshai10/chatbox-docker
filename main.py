@@ -5,7 +5,7 @@ from flask import Flask
 from flask import render_template,redirect,jsonify
 from flask import request
 import os
-import mysql.connector as conn
+#import mysql.connector as conn
 app = Flask(__name__)
 dic1={}
 CHAT_ROOM_DATA_PATH = 'rooms_data'

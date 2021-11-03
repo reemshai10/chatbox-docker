@@ -15,14 +15,12 @@ services:
     ports:
       - 80:80
 
-  db:
-    image: mysql:8.0.21
-    environment:
-      MYSQL_ROOT_USERNAME: root
-      MYSQL_ROOT_PASSWORD: example
-    volumes:
-      - chat_db:/var/lib/mysql  
+  #db:
+   # image: mysql:8.0.21
+    #environment:
+     # MYSQL_ROOT_USERNAME: root
+     # MYSQL_ROOT_PASSWORD: example
+    #volumes:
+    #  - ./db/db.sql:/var/lib/mysql  
 
-  volumes:
-    chat_db:
-      external: true    
+    
