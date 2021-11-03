@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "5000"
+    volumes:
+      - ./rooms_data:/app/rooms_data/
+   
+  nginx:
+    image: "nginx"
+    volumes:
+      -  ./nginx.conf:/etc/nginx/nginx.conf
+      -  ./templates/:/usr/share/nginx/html
+    ports:
+      - 80:80
+
+  db:
+    image: mysql:8.0.21
+    environment:
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - ./db/db.sql:/app/db/
