@@ -21,4 +21,8 @@ services:
       MYSQL_ROOT_USERNAME: root
       MYSQL_ROOT_PASSWORD: example
     volumes:
-      - ./db/db.sql:/app/db/
+      - chat_db:/var/lib/mysql  
+
+  volumes:
+    chat_db:
+      external: true    
