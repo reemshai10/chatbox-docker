@@ -5,6 +5,4 @@ CREATE TABLE `mydb`.`chat`(
      `msg` CHAR(20) NOT NULL,
      `time` DATETIME,
      PRIMARY KEY (`room`));
-
-USE mydb;
-INSERT INTO `chat` VALUES (1,'hi','hi',datetime.now());     
+ 
